@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search"
+    tools:context=".activity.SearchActivity">
+    <RelativeLayout
+        android:id="@+id/city_shan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#4682B4">
+        <ImageView
+            android:id="@+id/city_iv_back"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/city_tv_title"
+            android:text="添加城市"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/search_iv_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/city_shan_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/se"/>
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/city_shan_layout"
+        android:padding="3dp"
+        android:layout_toLeftOf="@id/search_iv_submit"
+        android:textColor="#F5FFFA"
+        android:hint="搜索国内城市:"
+        android:textColorHint="#FFF5EE	"
+        android:background="@drawable/searchbg"/>
+    <TextView
+        android:id="@+id/search_tv"
+        android:layout_below="@id/search_et"
+        android:layout_marginTop="20dp"
+        android:textSize="19dp"
+        android:textColor="#F0FFFF"
+        android:textStyle="bold"
+        android:text="热门城市"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <GridView
+        android:id="@+id/search_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_tv"
+        android:numColumns="5"></GridView>
+</RelativeLayout>
